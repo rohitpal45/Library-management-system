@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Library Management System </title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/fontawesome-all.css" rel="stylesheet" />
+</head>
+<body style="padding:unset">
+    <div>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+            <span class="icon">
+                <i class="fas fa-book-open"></i>
+            </span>
+            @Html.ActionLink("Library Management System ", "MenuBorrow", "Borrow", new { area = "" }, new { @class = "navbar-brand" })
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item btn-sm btn-danger">
+                        <i class="fas fa-home"></i>
+                        @Html.ActionLink("Home", "UserHome", "Borrow",null, new { @class = "nav-link icon",style="display:inline" })
+                    </li>
+                    <li class="nav-item btn-sm btn-danger">
+                        <i class="fas fa-address-card"></i>
+                        @Html.ActionLink("About", "UserAbout", "Borrow",null,  new { @class = "nav-link icon" ,style="display:inline"  })
+                    </li>
+                    <li class="nav-item btn-sm btn-danger">
+                        <i class="fas fa-id-badge"></i>
+                        @Html.ActionLink("Contact", "UserContact", "Borrow",null, new { @class = "nav-link icon" ,style="display:inline"  })
+                    </li>
+                </ul>
+                <ul class="navbar-nav justify-content-end" style="padding-right:50px">
+                    <li class="" style="padding-left:5px; padding-right:5px">
+                        @Html.ActionLink("Borrow", "MenuBorrow", "Borrow", new { area = "" }, new { @class = "nav-item btn-sm btn-primary text-light", style = "text-decoration:none;" })
+                    </li>
+                    <li class="" style="padding-left:5px; padding-right:5px">
+
+                        @Html.ActionLink("Requested", "MenuRequested", "Borrow", null, new { @class = "nav-item btn-sm btn-primary text-light", style = "text-decoration:none;" })
+                    </li>
+                    <li style="padding-left: 5px; padding-right: 5px ">
+                        @Html.ActionLink("Received", "MenuReceived", "Borrow", null, new { @class = "nav-item btn-sm btn-primary text-light", style = "text-decoration:none;" })
+                        
+                    </li>
+                    <li class="" style="padding-left:5px; padding-right:10px">
+                        @Html.ActionLink("Rejected", "MenuRejected", "Borrow", null, new { @class = "nav-item btn-sm btn-primary text-light", style = "text-decoration:none;" })
+                        
+                    </li>
+                </ul>
+                <span class="text-light" style="padding-top:1px; padding-right:15px">Welcome back @Session["userName"]!!</span>
+                <ul class="navbar-nav justify-content-end">
+
+                    <li class="nav-item btn btn-sm btn-danger">
+                        <i class="fas fa-sign-out-alt"></i>
+                        @Html.ActionLink("Logout", "Logout", "User", null, new { @class = "nav-link", onclick = "return alert('Logged out successfully');", style = "display:inline" })
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div style="padding-left:20px; padding-right:20px">
+        @RenderBody()
+    </div>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

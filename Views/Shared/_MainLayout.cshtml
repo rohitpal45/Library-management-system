@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Library Management System </title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/fontawesome-all.css" rel="stylesheet" />
+</head>
+<body style="padding:unset">
+    <div>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <span class="icon">
+                <i class="fas fa-book-open"></i>
+            </span>
+            @Html.ActionLink("Library Management System ", "Home", "Main", new { area = "" }, new { @class = "navbar-brand" })
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item btn-sm btn-dark">
+                        <i class="fas fa-home"></i>
+                        @Html.ActionLink("Home", "Home", "Main", new { @class = "nav-link icon", style="display:inline" })
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav justify-content-end">
+                    <li class="nav-item btn-sm btn-dark">
+                        <i class="fas fa-sign-in-alt"></i>
+                        @Html.ActionLink("Login", "Login", "Main", new { @class = "nav-link icon", style="display:inline" })
+                    </li>
+                </ul>
+            </div>
+        </nav>
+       
+    </div>
+    <div style="padding-left:20px; padding-right:20px;">
+        @RenderBody()
+    </div>
+  
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
