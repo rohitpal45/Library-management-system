@@ -5,8 +5,8 @@
 4-Database First Aproch </br>
 5-Views and Triggers in sql </br></b>
 <h2>Sql Script in App_Data</h2>
-<b>Admin LoginId:Admin@gmail.com</b><br>
-<b>Admin Password:123456</b>
+<b>Admin LoginId: Admin@gmail.com</b><br>
+<b>Admin Password: 123456</b>
 <h2>Moduls : Library Management System </h2>
 <b>A library management system (LMS) is a computerized system that helps manage a library's resources, including books, documents, and patrons: 
 </b></br>
